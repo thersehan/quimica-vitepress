@@ -54,7 +54,7 @@ Se houver duas ou mais cadeias que incluem o grupo funcional prioritário, escol
 
 Exemplo: Entre as três fórmulas abaixo, a primeira é a que tem maior prioridade e a terceira tem a menor prioridade.
 
-<img src="/docs/public/images/nomenclatura-compostos/3formulas.png " alt="3 formulas químicas" width="250" />
+<img src="/images/nomenclatura-compostos/3formulas.png " alt="3 formulas químicas" width="250" />
 
 ### **Passo 3: Priorizar a cadeia com mais ramificações**
 
@@ -62,10 +62,9 @@ Caso ainda haja empate entre duas cadeias possíveis, escolha aquela que apresen
 
 Exemplo: Se as duas cadeias fizessem parte do mesmo composto, a segunda seria a principal.
 
-<img src="/docs/public/images/nomenclatura-compostos/formula1.png" alt="formula química 1" width="250" />
+<img src="/images/nomenclatura-compostos/formula1.png" alt="formula química 1" width="250" />
 <br>
-<img src="/docs/public/images/nomenclatura-compostos/formula2.png" alt="formula química 2" width="250" />
-
+<img src="/images/nomenclatura-compostos/formula2.png" alt="formula química 2" width="250" />
 
 ### **Passo 4: Optar pela cadeia mais longa**
 
@@ -87,14 +86,14 @@ Depois de identificar a cadeia principal, o próximo passo é contar quantos car
 
 Exemplo: Na molécula abaixo, a cadeia principal (marcada de amarelo) tem 5 carbonos. Isso confere a ela o prefixo “pent-”.
 
-<img src="/docs/public/images/nomenclatura-compostos/moleculatrocar.png" alt="molécula-principal" width="250" />
+<img src="/images/nomenclatura-compostos/moleculatrocar.png" alt="molécula-principal" width="250" />
 
 Se a cadeia principal formar um **anel (ciclo)**, acrescentamos o prefixo **"ciclo-"** antes do nome do hidrocarboneto. A contagem dos carbonos segue a mesma regra, considerando o número total de átomos no anel.
 
 **Exemplo:**  
 No composto C₃H₆, onde os três carbonos formam um anel, o prefixo será **"cicloprop-"**. Como há apenas ligações simples, o infixo será **"an"**, resultando no nome **ciclopropano**.
 
-<img src="/docs/public/images/nomenclatura-compostos/ciclopropano.png" alt="estrutura do ciclopropano" width="250" />
+<img src="/images/nomenclatura-compostos/ciclopropano.png" alt="estrutura do ciclopropano" width="250" />
 
 ---
 

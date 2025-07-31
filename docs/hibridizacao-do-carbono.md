@@ -27,7 +27,7 @@ Para que o carbono consiga fazer **quatro ligações**, ocorre um processo chama
 
 Esses orbitais sofrem um processo chamado **hibridização**, formando **novos orbitais híbridos**, chamados **orbitais sp³, sp² ou sp**, dependendo do tipo de fusão que ocorre.
 
-<img src="/docs/public/images/hibridizacao-do-carbono/grafico.jpg" alt="Gráfico de energia (E) da distribuição eletrônica do átomo de carbono" width=500 />
+<img src="/images/hibridizacao-do-carbono/grafico.jpg" alt="Gráfico de energia (E) da distribuição eletrônica do átomo de carbono" width=500 />
 
 ## Tipos de Hibridização do Carbono
 
@@ -38,24 +38,24 @@ A fusão dos orbitais pode ocorrer de **três formas diferentes**, resultando no
    - Forma **4 orbitais híbridos** idênticos
    - Ligações **simples** (exemplo: metano - CH₄)
 
-<img src='/docs/public/images/hibridizacao-do-carbono/metano.jpg' alt='Metano' width=250 />
+<img src='/images/hibridizacao-do-carbono/metano.jpg' alt='Metano' width=250 />
 
 2. **Hibridização sp² → 1 orbital s + 2 orbitais p**
 
    - Forma **3 orbitais híbridos** e sobra **1 orbital p não hibridizado (puro)**
    - Ligações **duplas** (exemplo: eteno - C₂H₄)
 
-<img src='/docs/public/images/hibridizacao-do-carbono/eteno.jpg' alt='Eteno' width=250 />
+<img src='/images/hibridizacao-do-carbono/eteno.jpg' alt='Eteno' width=250 />
 
 3. **Hibridização sp → 1 orbital s + 1 orbital p**
    - Forma **2 orbitais híbridos** e sobram **2 orbitais p não hibridizados**
    - Ligações **triplas** (exemplo: etino - C₂H₂) ou duas ligações duplas (exemplo: propadieno C3H6)
 
-<img src='/docs/public/images/hibridizacao-do-carbono/etino.jpg' alt='Eetino' width=250 />
+<img src='/images/hibridizacao-do-carbono/etino.jpg' alt='Eetino' width=250 />
 <br/>
-<img src='/docs/public/images/hibridizacao-do-carbono/propadieno.jpg' alt='Propadieno' width=250 />
+<img src='/images/hibridizacao-do-carbono/propadieno.jpg' alt='Propadieno' width=250 />
 <br/>
-<img src='/docs/public/images/hibridizacao-do-carbono/grafico-2.jpg' alt='Estados híbridos do átomo de carbono' width=500 />
+<img src='/images/hibridizacao-do-carbono/grafico-2.jpg' alt='Estados híbridos do átomo de carbono' width=500 />
 
 ## Tipos de Ligações Covalentes no Carbono
 

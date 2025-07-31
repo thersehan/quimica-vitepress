@@ -47,15 +47,15 @@ Algumas **ramificações mais complexas** requerem um nome mais elaborado, que �
 
 - **Secundário**: Se o carbono que liga a ramificação à cadeia principal for **secundário**, usamos o prefixo **sec-**.
   - Exemplo: sec-butil (onde a ramificação ocorre no carbono secundário da cadeia).  
-    <img src="/docs/public/images/nomenclatura-ramificacoes/sec-butil.jpg" alt="Sec-butil" width=80 />
+    <img src="/images/nomenclatura-ramificacoes/sec-butil.jpg" alt="Sec-butil" width=80 />
 - **Terciário**: Se o carbono que faz a ligação for **terciário**, usamos o prefixo **terc-**.
   - Exemplo: terc-butil (onde a ramificação ocorre no carbono terciário da cadeia).  
-    <img src="/docs/public/images/nomenclatura-ramificacoes/terc-butil.jpg" alt="Terc-butil" width=80 />
+    <img src="/images/nomenclatura-ramificacoes/terc-butil.jpg" alt="Terc-butil" width=80 />
 
 Obs: Ao usar os prefixos sec- e terc-, é importante observar que após a ligação da ramificação com a cadeia principal, o carbono secundário do sec-butil se torna terciário e o carbono terciário do terc-butil se torna quaternário. No entanto, a nomenclatura da ramificação trata deles na sua forma separada da cadeia principal, por isso são usados esses prefixos.
 
 - Se a ramificação for formada por um carbono primário, ela pode ser nomeada de duas maneiras dependendo da estrutura:
   - **iso-**: Quando o penúltimo carbono da ramificação for **terciário** e tiver dois grupos metilas.  
-    <img src="/docs/public/images/nomenclatura-ramificacoes/iso-butil.jpg" alt="Iso-butil" width=80 />
+    <img src="/images/nomenclatura-ramificacoes/iso-butil.jpg" alt="Iso-butil" width=80 />
   - **neo-**: Quando o penúltimo carbono for **quaternário** e tiver três grupos metil.  
-    <img src="/docs/public/images/nomenclatura-ramificacoes/neo-pentil.jpg" alt="Neo-pentil" width=80 />
+    <img src="/images/nomenclatura-ramificacoes/neo-pentil.jpg" alt="Neo-pentil" width=80 />

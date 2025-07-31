@@ -26,11 +26,11 @@ A **fórmula de traços** representa cada átomo com seu **símbolo químico** e
 
 - O etanol pode ser representado assim:
 
-<img src='/docs/public/images/representacao-das-moleculas-organicas/etanol.jpg' alt="Etanol" />
+<img src='/images/representacao-das-moleculas-organicas/etanol.jpg' alt="Etanol" />
 
 - O metoximetano pode ser representado assim:
 
-<img src='/docs/public/images/representacao-das-moleculas-organicas/missing.jpg' alt="Sem imagem disponível" width=250 />
+<img src='/images/representacao-das-moleculas-organicas/missing.jpg' alt="Sem imagem disponível" width=250 />
 
 ## 3. Fórmula Simplificada
 
@@ -65,15 +65,15 @@ A **fórmula de linha** é a mais utilizada no estudo da química orgânica, poi
 
 - O etano **(CH₃ — CH₃)** é representado como
 
-<img src='/docs/public/images/representacao-das-moleculas-organicas/etano.jpg' alt="Etano" />
+<img src='/images/representacao-das-moleculas-organicas/etano.jpg' alt="Etano" />
 
 - O metanol **(CH₃ — OH)** é representado como
 
-<img src='/docs/public/images/representacao-das-moleculas-organicas/metanol.jpg' alt="Metanol" />
+<img src='/images/representacao-das-moleculas-organicas/metanol.jpg' alt="Metanol" />
 
 - O propano **(H3C — CH2 — CH3)** é representado como
 
-<img src='/docs/public/images/representacao-das-moleculas-organicas/propano.png' alt="Propano" width=50 />
+<img src='/images/representacao-das-moleculas-organicas/propano.png' alt="Propano" width=50 />
 
 ## 6. Fórmula Tridimensional
 
@@ -88,4 +88,4 @@ Como muitas moléculas orgânicas possuem **geometria tridimensional**, podemos 
 
 - O metano **(CH₄)** é representado com uma estrutura tetraédrica, onde um dos hidrogênios pode estar **saindo para frente** e outro **indo para trás, baseado em um plano**.
 
-<img src="/docs/public/images/representacao-das-moleculas-organicas/metano.png" alt="Metano" width=250 />
+<img src="/images/representacao-das-moleculas-organicas/metano.png" alt="Metano" width=250 />
