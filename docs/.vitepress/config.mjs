@@ -15,6 +15,11 @@ export default defineConfig({
       { text: "Laboratório", link: "#" },
     ],
 
+    footer: {
+      copyright:
+        'Feito por <a href="https://github.com/thersehan"> Juliano Monteiro Gonçalves </a> e <a href="https://github.com/holzdm"> Vítor Holz de Martin </a>',
+    },
+
     docFooter: { prev: "Anterior", next: "Próximo" },
 
     outline: { label: "Tópicos" },
