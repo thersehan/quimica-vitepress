@@ -8,7 +8,7 @@ export default defineConfig({
   description: "Projeto de Iniciação Científica",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "public/logo.png",
+    logo: "logo.png",
     nav: [
       { text: "Home", link: "/" },
       { text: "Conteúdos", link: "/historia-da-quimica-organica" },
@@ -56,7 +56,10 @@ export default defineConfig({
             text: "Nomenclatura de Compostos Orgânicos",
             link: "/nomenclatura-compostos",
           },
-
+          {
+            text: "Nomenclatura de Ramificações",
+            link: "/nomenclatura-ramificacoes",
+          },
         ],
       },
     ],
