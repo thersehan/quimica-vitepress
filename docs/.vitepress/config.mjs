@@ -6,7 +6,7 @@ export default defineConfig({
   cleanUrls: true,
   title: "Apostila",
   description: "Projeto de Iniciação Científica",
-  base: /quimica-vitepress/,
+  base: "/quimica-vitepress/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "logo.png",
