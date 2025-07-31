@@ -6,4 +6,6 @@ hero:
   name: "Química Orgânica"
   text: Projeto de Iniciação Científica
   tagline: "Uma apostila interativa"
+
+footer: true
 ---
