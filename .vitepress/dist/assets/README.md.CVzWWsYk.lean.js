@@ -1,0 +1,1 @@
+import{_ as e,c as i,o as r,ae as t}from"./chunks/framework.Cd-3tpCq.js";const m=JSON.parse('{"title":"quimica-vitepress","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),s={name:"README.md"};function l(o,a,n,c,u,d){return r(),i("div",null,a[0]||(a[0]=[t("",5)]))}const p=e(s,[["render",l]]);export{m as __pageData,p as default};
