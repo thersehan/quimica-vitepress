@@ -7,12 +7,12 @@ A cadeia carbônica é a estrutura formada por átomos de carbono conectados ent
 - **Aberta** (Acíclica ou Alifática): Não forma ciclos, sendo uma sequência linear ou ramificada de carbonos.  
   Exemplo: Propano (C₃H₈).
 
-<img src="/images/propano.png" alt="Estrutura do Propano" width="250" />
+<img src="/images/cadeias-carbonicas/propano.png" alt="Estrutura do Propano" width="250" />
 
 - **Fechada** (Cíclica): Forma um ciclo, podendo ser saturada (somente ligações simples) ou insaturada (com ligações duplas ou triplas).  
   Exemplo: Ciclopentano (C₅H₁₀).
 
-<img src="/images/ciclopentano.png" alt="Estrutura do Ciclopentano" width="250" />
+<img src="/images/cadeias-carbonicas/ciclopentano.png" alt="Estrutura do Ciclopentano" width="250" />
 
 - **Mista** (Cíclica Ramificada): Contém uma parte cíclica, mas também possui carbonos fora do ciclo. Alguns autores a consideram uma categoria intermediária entre cadeias abertas e fechadas, outros acreditam que seja uma particularidade das cadeias cíclicas.
 
@@ -21,12 +21,12 @@ A cadeia carbônica é a estrutura formada por átomos de carbono conectados ent
 - **Aromática**: Possui pelo menos um anel benzênico, o que confere propriedades químicas específicas.  
   Exemplo: Benzeno (C₆H₆).
 
-<img src="/images/benzeno.png" alt="Estrutura do Benzeno" width="250" />
+<img src="/images/cadeias-carbonicas/benzeno.png" alt="Estrutura do Benzeno" width="250" />
 
 - **Não Aromática** (Alifática ou Alicíclica): Não possui anel benzênico.  
   Exemplo: Cicloexano (C₆H₁₂).
   
-<img src="/images/ciclohexano.png" alt="Estrutura do Ciclohexano" width="250" />
+<img src="/images/cadeias-carbonicas/ciclohexano.png" alt="Estrutura do Ciclohexano" width="250" />
 
 O benzeno (C₆H₆), também chamado de anel benzênico, é um hidrocarboneto aromático, ou seja, um composto formado apenas por carbono e hidrogênio que possui um anel estável de seis carbonos. Sua estrutura é representada por um hexágono com um círculo no centro, simbolizando a ressonância das ligações.
 

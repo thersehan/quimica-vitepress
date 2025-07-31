@@ -52,6 +52,11 @@ export default defineConfig({
             text: "Hidrocarbonetos",
             link: "/hidrocarbonetos",
           },
+          {
+            text: "Nomenclatura de Compostos Orgânicos",
+            link: "/nomenclatura-compostos",
+          },
+
         ],
       },
     ],
