@@ -20,6 +20,8 @@ A solução para isso é formar **4 ligações covalentes** com outros átomos, 
 Esse postulado afirma que as **quatro ligações que o carbono faz têm o mesmo comportamento e a mesma força**.
 Para entender melhor, podemos observar a estrutura da molécula de **clorofórmio (CHCℓ₃)**.
 
+<img src="/images/caracteristicas-do-carbono/cloroformio.jpg" alt="Clorofórmio" width=250 />
+
 Mesmo que a posição dos átomos na molécula mude, suas propriedades **continuam as mesmas**. Isso ocorre porque as ligações do carbono são equivalentes e podem se reorganizar sem alterar a identidade química da substância.
 
 ### 3º Postulado: "O carbono forma cadeias".
