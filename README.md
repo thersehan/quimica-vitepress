@@ -4,6 +4,7 @@
 
 - [x] Criar páginas e rotas principais
 - [ ] Melhorar página inicial
+- [ ] Publicar workflow
 
 ## Fixes
 
