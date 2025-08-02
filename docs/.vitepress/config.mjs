@@ -12,7 +12,7 @@ export default defineConfig({
     logo: "logo.png",
     nav: [
       { text: "Home", link: "/" },
-      { text: "Conteúdos", link: "/historia-da-quimica-organica" },
+      { text: "Conteúdos", link: "/conteudos/historia-da-quimica-organica" },
       { text: "Laboratório", link: "#" },
     ],
 
@@ -29,42 +29,42 @@ export default defineConfig({
       {
         text: "Conteúdos",
         items: [
-          { text: "História", link: "/historia-da-quimica-organica" },
+          { text: "História", link: "/conteudos/historia-da-quimica-organica" },
           {
             text: "Conceito de Química Orgânica",
-            link: "/conceito-de-quimica-organica",
+            link: "/conteudos/conceito-de-quimica-organica",
           },
           {
             text: "Características do Carbono",
-            link: "/caracteristicas-do-carbono",
+            link: "/conteudos/caracteristicas-do-carbono",
           },
           {
             text: "Hibridização do Carbono",
-            link: "/hibridizacao-do-carbono",
+            link: "/conteudos/hibridizacao-do-carbono",
           },
           {
             text: "Representação das Moléculas Orgânicas",
-            link: "/representacao-das-moleculas-organicas",
+            link: "/conteudos/representacao-das-moleculas-organicas",
           },
           {
             text: "Classificação do Carbono em uma Cadeia",
-            link: "/classificacao-do-carbono-em-uma-cadeia",
+            link: "/conteudos/classificacao-do-carbono-em-uma-cadeia",
           },
           {
             text: "Cadeias Carbônicas",
-            link: "/cadeias-carbonicas",
+            link: "/conteudos/cadeias-carbonicas",
           },
           {
             text: "Hidrocarbonetos",
-            link: "/hidrocarbonetos",
+            link: "/conteudos/hidrocarbonetos",
           },
           {
             text: "Nomenclatura de Compostos Orgânicos",
-            link: "/nomenclatura-compostos",
+            link: "/conteudos/nomenclatura-compostos",
           },
           {
             text: "Nomenclatura de Ramificações",
-            link: "/nomenclatura-ramificacoes",
+            link: "/conteudos/nomenclatura-ramificacoes",
           },
         ],
       },
