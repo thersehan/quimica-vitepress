@@ -13,7 +13,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Conteúdos", link: "/conteudos/historia-da-quimica-organica" },
-      { text: "Laboratório", link: "#" },
+      { text: "Laboratório", link: "/lab.md" },
     ],
 
     footer: {
