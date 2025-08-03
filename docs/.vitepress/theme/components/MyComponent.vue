@@ -1,43 +1,14 @@
 <template>
-  <v-stage ref="stage" :config="stageSize">
-    <v-layer ref="layer">
-      <v-text
-        @dragstart="handleDragStart"
-        @dragend="handleDragEnd"
-        :config="{
-          text: 'Draggable Text',
-          x: 50,
-          y: 50,
-          draggable: true,
-          fill: isDragging ? 'green' : 'black',
-        }"
-      />
-    </v-layer>
-  </v-stage>
+  <label for="">Nome: </label>
+  <input class="mb bg-effect" type="text" />
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      stageSize: {
-        width: 0,
-        height: 0,
-      },
-      isDragging: false,
-    };
-  },
-  beforeMount() {
-    this.stageSize.width = window.innerWidth;
-    this.stageSize.height = window.innerHeight;
-  },
-  methods: {
-    handleDragStart() {
-      this.isDragging = true;
-    },
-    handleDragEnd() {
-      this.isDragging = false;
-    },
-  },
-};
-</script>
+<style>
+.mb {
+  border-bottom: 1px solid black;
+}
+.bg-effect {
+  padding: 2px 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
