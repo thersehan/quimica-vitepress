@@ -10,6 +10,31 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "logo.png",
+    search: {
+      provider: "local",
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "Pesquisar",
+              },
+              modal: {
+                displayDetails: "mostrar detalhes",
+                resetButtonTitle: "redefinir busca",
+                backButtonTitle: "fechar busca",
+                noResultsText: "sem resultados para",
+                footer: {
+                  selectText: "selecionar",
+                  navigateText: "navegar",
+                  closeText: "sair",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
     nav: [
       { text: "Home", link: "/" },
       { text: "Conteúdos", link: "/conteudos/historia-da-quimica-organica" },
