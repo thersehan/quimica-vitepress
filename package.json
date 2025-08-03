@@ -9,13 +9,9 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "vue": "^3.5.18"
-=======
     "canvas": "^3.1.2",
     "konva": "^9.3.22",
     "vue": "^3.5.18",
     "vue-konva": "^3.2.2"
->>>>>>> develop
   }
 }
