@@ -1,6 +1,6 @@
 # quimica-vitepress
 
-Um projeto feito com Vue+Vitepress+Yarn que consiste em uma apostila web interativa sobre conteúdos de química orgânica.
+Um projeto Vitepress que consiste em uma apostila web interativa sobre conteúdos de química orgânica. Utiliza Vue + Konva para a seção de laboratório interativo.
 
 ## Instalação
 
@@ -17,14 +17,15 @@ yarn docs:dev
 
 - [x] Criar páginas e rotas principais
 - [x] Publicar workflow
+- [x] Iniciar desenvolvimento da seção Laboratório
 - [ ] Adicionar atividades e exemplos ao material
 - [ ] Melhorar página inicial
-- [ ] Iniciar desenvolvimento da seção Laboratório
 
 ### Fixes
 
 - [x] Imagens faltando
-- [ ] Uniformizar formatação
+- [ ] \(Opcional\) Utilizar formatação própria da framework
+- [ ] \(Opcional\) Homogenizar a estilização dos artigos
 
 ## Convenção para commits
 
