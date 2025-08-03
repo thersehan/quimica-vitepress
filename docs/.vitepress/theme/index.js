@@ -4,6 +4,8 @@ import DefaultTheme from "vitepress/theme";
 import MyComponent from "./components/MyComponent.vue";
 import "./style.css";
 
+import VueKonva from "vue-konva";
+
 /** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
@@ -14,5 +16,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component("MyComponent", MyComponent);
+    app.use(VueKonva);
   },
 };

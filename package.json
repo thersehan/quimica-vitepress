@@ -9,6 +9,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "vue": "^3.5.18"
+    "konva": "^9.3.22",
+    "vue": "^3.5.18",
+    "vue-konva": "^3.2.2"
   }
 }

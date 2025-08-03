@@ -858,6 +858,11 @@ is-what@^4.1.8:
   resolved "https://registry.npmjs.org/is-what/-/is-what-4.1.16.tgz"
   integrity sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==
 
+konva@^9.3.22:
+  version "9.3.22"
+  resolved "https://registry.yarnpkg.com/konva/-/konva-9.3.22.tgz#aa979c410127dda20bf0788ab70a414648c25a91"
+  integrity sha512-yQI5d1bmELlD/fowuyfOp9ff+oamg26WOCkyqUyc+nczD/lhRa3EvD2MZOoc4c1293TAubW9n34fSQLgSeEgSw==
+
 magic-string@^0.30.17:
   version "0.30.17"
   resolved "https://registry.npmjs.org/magic-string/-/magic-string-0.30.17.tgz"
@@ -1165,6 +1170,11 @@ vitepress@^1.6.3:
     shiki "^2.1.0"
     vite "^5.4.14"
     vue "^3.5.13"
+
+vue-konva@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/vue-konva/-/vue-konva-3.2.2.tgz#007a3eac8057f544cd02c72eb1d77e0781523d5f"
+  integrity sha512-1N8uuRpSZCsR8U0m/qflSlIvoRz78WzP3PZtpwwfrJ9WQKX5fJJ2dhHcEH3wHgWn/3TsABkmxBXM2VxGPUsirQ==
 
 vue@^3.5.13, vue@^3.5.18:
   version "3.5.18"
