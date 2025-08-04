@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
-import MyComponent from "./components/MyComponent.vue";
+import LabCanvas from "./components/LabCanvas.vue";
 import "./style.css";
 
 import VueKonva from "vue-konva";
@@ -15,7 +15,7 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    app.component("MyComponent", MyComponent);
+    app.component("LabCanvas", LabCanvas);
     app.use(VueKonva);
   },
 };
