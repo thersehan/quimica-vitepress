@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
-import LabCanvas from "./components/LabCanvas.vue";
+import LabCanvas from "./components/lab/LabCanvas.vue";
 import "./style.css";
 
 import VueKonva from "vue-konva";
