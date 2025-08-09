@@ -71,6 +71,14 @@
 }
 
 /**
+ * Background
+ * -------------------------------------------------------------------------- */
+
+.dark {
+  --vp-c-bg: #0f0f0f;
+}
+
+/**
  * Component: Button
  * -------------------------------------------------------------------------- */
 
@@ -141,15 +149,11 @@
  * Custom
  * -------------------------------------------------------------------------- */
 
-#VPContent {
-  overflow: hidden;
-}
-
 .spin-animation {
   width: 300px;
   position: absolute;
   right: 0;
-  top: -300px;
+  top: 0;
   animation: spin 30s linear infinite;
 }
 
@@ -161,4 +165,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (min-width: 640px) {
+  .spin-animation {
+    top: -100px;
+  }
+}
+
+@media (min-width: 960px) {
+  .spin-animation {
+    top: -300px;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
 }
