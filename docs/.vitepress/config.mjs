@@ -7,6 +7,7 @@ export default defineConfig({
   title: "Apostila",
   description: "Projeto de Iniciação Científica",
   base: "/quimica-vitepress/",
+  head: [["link", { rel: "icon", href: "/quimica-vitepress/favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "logo.png",

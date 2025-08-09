@@ -9,3 +9,5 @@ hero:
 
 footer: true
 ---
+
+<img src="/public/imagem-home.png" class="spin-animation">
