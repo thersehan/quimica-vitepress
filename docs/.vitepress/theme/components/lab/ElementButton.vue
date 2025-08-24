@@ -1,5 +1,5 @@
 <template>
-  <Atom :config="element.config" @click="$emit('buttonClick', element.id)" />
+  <Atom :config="element.config" @click="$emit('leftClick', element.id)" />
 </template>
 
 <script setup>

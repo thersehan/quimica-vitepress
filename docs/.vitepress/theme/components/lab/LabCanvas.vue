@@ -3,13 +3,19 @@
     <v-layer ref="button-layer">
       <ElementButton
         v-for="element in elements"
-        @button-click="addAtom"
-        :element
         :key="element.id"
+        @leftClick="addAtom"
+        :element
       />
     </v-layer>
     <v-layer ref="atoms-layer">
-      <Atom v-for="atom in atoms" :atom />
+      <v-group>
+        <Atom
+          v-for="atom in atoms"
+          :key="atom.id"
+          :atom
+          @rightClick="deleteAtom"
+      /></v-group>
     </v-layer>
   </v-stage>
 </template>
@@ -49,15 +55,22 @@ const elements = [
 ];
 
 const atoms = ref([]);
+const atomIdCounter = ref(0);
 
 function addAtom(id) {
-  const newAtom = elements[id].config;
+  const newAtom = { ...elements[id].config };
+  newAtom.id = atomIdCounter.value.toString();
+  atomIdCounter.value++;
   newAtom.x = 200;
   newAtom.y = 100;
   newAtom.draggable = true;
   atoms.value.push(newAtom);
-  // console.log(atoms.value.length);
-  // console.log(elements[id].config);
+}
+
+function deleteAtom(id) {
+  const index = atoms.value.map((atom) => atom.id).indexOf(id);
+  atoms.value.splice(index, 1);
+  return false;
 }
 
 onBeforeMount(() => {
