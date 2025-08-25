@@ -1,5 +1,5 @@
 <template>
-  <v-circle :config="atom" @dblclick="$emit('atomDblClick', id)" />
+  <v-circle :config="atom" @dblclick="$emit('atomDblClick', atom.id)" />
 </template>
 
 <script setup>

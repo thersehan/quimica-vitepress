@@ -40,6 +40,7 @@ const elements = [
       strokeWidth: 1,
     },
   },
+  /* 
   {
     id: 1,
     name: "Oxigênio",
@@ -52,6 +53,7 @@ const elements = [
       strokeWidth: 1,
     },
   },
+ */
 ];
 
 const atoms = ref([]);
