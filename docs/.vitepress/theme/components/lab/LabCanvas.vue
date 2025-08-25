@@ -10,7 +10,11 @@
     </v-layer>
     <v-layer ref="atoms-layer">
       <v-group>
-        <Atom v-for="atom in atoms" :key="atom.id" :atom @dblclick="deleteAtom"
+        <Atom
+          v-for="atom in atoms"
+          :key="atom.id"
+          :atom
+          @atomDblClick="deleteAtom"
       /></v-group>
     </v-layer>
   </v-stage>
