@@ -4,7 +4,7 @@
       <ElementButton
         v-for="element in elements"
         :key="element.id"
-        @leftClick="addAtom"
+        @elementBtnClick="addAtom"
         :element
       />
       <v-text :config="elementButtonText" />
@@ -15,7 +15,9 @@
           v-for="atom in atoms"
           :key="atom.id"
           :atom
+          @atomClick="selectAtom"
           @atomDblClick="deleteAtom"
+          @atomMovement="handleAtomMovement"
       /></v-group>
     </v-layer>
   </v-stage>
@@ -27,6 +29,7 @@ import Atom from "./Atom.vue";
 import ElementButton from "./ElementButton.vue";
 
 const stageSize = ref({ width: 0, height: 0 });
+const stage = ref(null);
 
 const elements = [
   {
@@ -37,11 +40,12 @@ const elements = [
       y: 100,
       fill: "black",
       stroke: "white",
-      radius: 10,
       strokeWidth: 1,
+      width: 24,
+      height: 24,
     },
   },
-  /* 
+  /*
   {
     id: 1,
     name: "Oxigênio",
@@ -58,21 +62,25 @@ const elements = [
 ];
 
 const elementButtonText = {
-  x: 200,
-  y: 100,
+  x: 130,
+  y: 130,
   text: "adicionar carbono",
+  fontFamily: "JetBrains Mono",
   fontSize: 16,
 };
 
 const atoms = ref([]);
 const atomIdCounter = ref(0);
 
+const selectedAtom = ref(null);
+
 function addAtom(id) {
   const newAtom = { ...elements[id].config };
   newAtom.id = atomIdCounter.value.toString();
   atomIdCounter.value++;
-  newAtom.x = 200;
-  newAtom.y = 100;
+  newAtom.x = stageSize.value.width / 2;
+  newAtom.y = stageSize.value.height / 2;
+  newAtom.radius = 12;
   newAtom.draggable = true;
   atoms.value.push(newAtom);
 }
@@ -81,6 +89,18 @@ function deleteAtom(id) {
   const index = atoms.value.map((atom) => atom.id).indexOf(id);
   atoms.value.splice(index, 1);
   return false;
+}
+
+function handleAtomMovement(id) {
+  const mousePos = stage.value.getNode().getPointerPosition();
+  const atom = atoms.value.find((atom) => atom.id === id);
+  atom.x = mousePos.x;
+  atom.y = mousePos.y;
+  console.log(atom);
+}
+
+function selectAtom(id) {
+  selectedAtom.value = atoms.value.find((atom) => atom.id === id);
 }
 
 onBeforeMount(() => {
