@@ -2,6 +2,10 @@
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
 import LabCanvas from "./components/lab/LabCanvas.vue";
+import MoleculeEtanol from './components/MoleculeEtanol.vue'
+import MoleculePropano from "./components/MoleculePropano.vue"; 
+import MoleculeCiclopentano from "./components/MoleculeCiclopentano.vue";
+import MoleculeCiclohexano from "./components/MoleculeCiclohexano.vue";
 import "./style.css";
 
 import VueKonva from "vue-konva";
@@ -16,6 +20,10 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component("LabCanvas", LabCanvas);
+    app.component("MoleculeEtanol", MoleculeEtanol);
+    app.component("MoleculePropano", MoleculePropano);
+    app.component("MoleculeCiclopentano", MoleculeCiclopentano);
+    app.component("MoleculeCiclohexano", MoleculeCiclohexano);
     app.use(VueKonva);
   },
 };
