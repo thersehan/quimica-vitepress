@@ -7,6 +7,7 @@
         @leftClick="addAtom"
         :element
       />
+      <v-text :config="elementButtonText" />
     </v-layer>
     <v-layer ref="atoms-layer">
       <v-group>
@@ -55,6 +56,13 @@ const elements = [
   },
  */
 ];
+
+const elementButtonText = {
+  x: 200,
+  y: 100,
+  text: "adicionar carbono",
+  fontSize: 16,
+};
 
 const atoms = ref([]);
 const atomIdCounter = ref(0);
