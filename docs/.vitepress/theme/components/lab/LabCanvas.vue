@@ -1,5 +1,8 @@
 <template>
   <v-stage ref="stage" :config="stageSize">
+    <v-layer>
+      <v-rect :config="background" @click="unselect" />
+    </v-layer>
     <v-layer ref="button-layer">
       <ElementButton
         v-for="element in elements"
@@ -10,15 +13,14 @@
       <v-text :config="elementButtonText" />
     </v-layer>
     <v-layer ref="atoms-layer">
-      <v-group>
-        <Atom
-          v-for="atom in atoms"
-          :key="atom.id"
-          :atom
-          @atomClick="selectAtom"
-          @atomDblClick="deleteAtom"
-          @atomMovement="handleAtomMovement"
-      /></v-group>
+      <Atom
+        v-for="atom in atoms"
+        :key="atom.id"
+        :atom
+        @atomClick="selectAtom"
+        @atomDblClick="deleteAtom"
+        @atomMovement="handleAtomMovement"
+      />
     </v-layer>
   </v-stage>
 </template>
@@ -61,6 +63,11 @@ const elements = [
  */
 ];
 
+const background = {
+  width: 1000,
+  height: 1000,
+};
+
 const elementButtonText = {
   x: 130,
   y: 130,
@@ -82,6 +89,7 @@ function addAtom(id) {
   newAtom.y = stageSize.value.height / 2;
   newAtom.radius = 12;
   newAtom.draggable = true;
+  newAtom.bonds = [];
   atoms.value.push(newAtom);
 }
 
@@ -96,11 +104,18 @@ function handleAtomMovement(id) {
   const atom = atoms.value.find((atom) => atom.id === id);
   atom.x = mousePos.x;
   atom.y = mousePos.y;
-  console.log(atom);
 }
 
 function selectAtom(id) {
-  selectedAtom.value = atoms.value.find((atom) => atom.id === id);
+  if (!selectedAtom.value) {
+    selectedAtom.value = atoms.value.find((atom) => atom.id === id);
+  } else {
+    selectedAtom.value.bonds.push(id);
+  }
+}
+
+function unselect() {
+  selectedAtom.value = null;
 }
 
 onBeforeMount(() => {
