@@ -59,7 +59,7 @@ const guideText = {
 const moleculeText = ref({
   x: 30,
   y: 130,
-  text: "",
+  text: "...",
   fontFamily: "lekton",
   fontSize: 32,
   fontStyle: "bold",
@@ -146,17 +146,21 @@ function unselect() {
 }
 
 function updateMoleculeLabel() {
-  moleculeText.value.text =
-    "C" +
-    numberToSubtext(atoms.value.length) +
-    "H" +
-    numberToSubtext(
-      4 * atoms.value.length -
-        atoms.value.reduce(
-          (bondCounter, atom) => bondCounter + atom.bonds.length,
-          0
-        )
-    ).toString();
+  if (atoms.value.length) {
+    moleculeText.value.text =
+      "C" +
+      numberToSubtext(atoms.value.length) +
+      "H" +
+      numberToSubtext(
+        4 * atoms.value.length -
+          atoms.value.reduce(
+            (bondCounter, atom) => bondCounter + atom.bonds.length,
+            0
+          )
+      ).toString();
+  } else {
+    moleculeText.value.text = "...";
+  }
 }
 
 onBeforeMount(() => {
