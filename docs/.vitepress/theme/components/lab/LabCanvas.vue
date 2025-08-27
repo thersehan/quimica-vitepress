@@ -22,6 +22,15 @@
         @atomMovement="handleAtomMovement"
       />
     </v-layer>
+    <v-layer>
+      <v-group v-for="atom in atoms" :key="atom.id">
+        <v-line
+          v-for="(bond, index) in atom.bonds"
+          :key="index"
+          :config="bond.config"
+        />
+      </v-group>
+    </v-layer>
   </v-stage>
 </template>
 
@@ -62,6 +71,11 @@ const elements = [
   },
  */
 ];
+
+const bondLineConfig = {
+  stroke: "black",
+  strokeWidth: 3,
+};
 
 const background = {
   width: 1000,
@@ -109,12 +123,42 @@ function handleAtomMovement(id) {
 function selectAtom(id) {
   if (!selectedAtom.value) {
     selectedAtom.value = atoms.value.find((atom) => atom.id === id);
+    selectedAtom.value.strokeWidth = 3;
   } else {
-    selectedAtom.value.bonds.push(id);
+    const newlySelectedAtom = atoms.value.find((atom) => atom.id === id);
+    selectedAtom.value.bonds.push({
+      id,
+      config: {
+        ...bondLineConfig,
+        points: [
+          selectedAtom.value.x,
+          selectedAtom.value.y,
+          newlySelectedAtom.x,
+          newlySelectedAtom.y,
+        ],
+      },
+    });
+    newlySelectedAtom.bonds.push({
+      id,
+      config: {
+        ...bondLineConfig,
+        points: [
+          selectedAtom.value.x,
+          selectedAtom.value.y,
+          newlySelectedAtom.x,
+          newlySelectedAtom.y,
+        ],
+      },
+    });
+    selectedAtom.value.strokeWidth = 1;
+    selectedAtom.value = null;
   }
 }
 
 function unselect() {
+  if (selectedAtom.value) {
+    selectedAtom.value.strokeWidth = 1;
+  }
   selectedAtom.value = null;
 }
 
