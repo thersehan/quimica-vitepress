@@ -1,16 +1,19 @@
 <template>
   <v-stage ref="stage" :config="stageSize">
     <v-layer>
-      <v-rect :config="background" @click="unselect" />
+      <v-rect :config="background" @dblclick="addAtom" @click="unselect" />
     </v-layer>
     <v-layer ref="button-layer">
-      <ElementButton
-        v-for="element in elements"
-        :key="element.id"
-        @elementBtnClick="addAtom"
-        :element
-      />
       <v-text :config="elementButtonText" />
+    </v-layer>
+    <v-layer>
+      <v-group v-for="atom in atoms" :key="atom.id">
+        <v-line
+          v-for="(bond, index) in atom.bonds"
+          :key="index"
+          :config="bond.config"
+        />
+      </v-group>
     </v-layer>
     <v-layer ref="atoms-layer">
       <Atom
@@ -22,58 +25,18 @@
         @atomMovement="handleAtomMovement"
       />
     </v-layer>
-    <v-layer>
-      <v-group v-for="atom in atoms" :key="atom.id">
-        <v-line
-          v-for="(bond, index) in atom.bonds"
-          :key="index"
-          :config="bond.config"
-        />
-      </v-group>
-    </v-layer>
   </v-stage>
 </template>
 
 <script setup>
 import { ref, onBeforeMount } from "vue";
 import Atom from "./Atom.vue";
-import ElementButton from "./ElementButton.vue";
 
 const stageSize = ref({ width: 0, height: 0 });
 const stage = ref(null);
 
-const elements = [
-  {
-    id: 0,
-    name: "Carbono",
-    config: {
-      x: 100,
-      y: 100,
-      fill: "black",
-      stroke: "white",
-      strokeWidth: 1,
-      width: 24,
-      height: 24,
-    },
-  },
-  /*
-  {
-    id: 1,
-    name: "Oxigênio",
-    config: {
-      x: 100,
-      y: 200,
-      fill: "red",
-      stroke: "white",
-      radius: 10,
-      strokeWidth: 1,
-    },
-  },
- */
-];
-
 const bondLineConfig = {
-  stroke: "black",
+  stroke: "gray",
   strokeWidth: 3,
 };
 
@@ -83,11 +46,12 @@ const background = {
 };
 
 const elementButtonText = {
-  x: 130,
-  y: 130,
-  text: "adicionar carbono",
+  x: 30,
+  y: 30,
+  text: "Clique duas vezes na tela para adicionar um carbono\n\nClique uma vez em um carbono para selecioná-lo\n\nClique duas vezes em um carbono para excluí-lo",
   fontFamily: "JetBrains Mono",
-  fontSize: 16,
+  fontSize: 14,
+  fill: "gray",
 };
 
 const atoms = ref([]);
@@ -95,16 +59,21 @@ const atomIdCounter = ref(0);
 
 const selectedAtom = ref(null);
 
-function addAtom(id) {
-  const newAtom = { ...elements[id].config };
-  newAtom.id = atomIdCounter.value.toString();
+function addAtom() {
+  console.log("add atom");
+  const mousePos = stage.value.getNode().getPointerPosition();
+  atoms.value.push({
+    id: atomIdCounter.value.toString(),
+    x: mousePos.x,
+    y: mousePos.y,
+    fill: "black",
+    stroke: "white",
+    strokeWidth: 1,
+    radius: 12,
+    draggable: true,
+    bonds: [],
+  });
   atomIdCounter.value++;
-  newAtom.x = stageSize.value.width / 2;
-  newAtom.y = stageSize.value.height / 2;
-  newAtom.radius = 12;
-  newAtom.draggable = true;
-  newAtom.bonds = [];
-  atoms.value.push(newAtom);
 }
 
 function deleteAtom(id) {
