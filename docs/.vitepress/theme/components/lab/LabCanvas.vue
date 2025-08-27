@@ -93,6 +93,7 @@ function addAtom() {
 function deleteAtom(id) {
   const index = atoms.value.map((atom) => atom.id).indexOf(id);
   atoms.value.splice(index, 1);
+  updateBonds();
   updateMoleculeLabel();
   return false;
 }
@@ -109,7 +110,7 @@ function selectAtom(id) {
   if (!selectedAtom.value) {
     selectedAtom.value = atoms.value.find((atom) => atom.id === id);
     selectedAtom.value.strokeWidth = 3;
-  } else {
+  } else if (id !== selectedAtom.value.id) {
     const newlySelectedAtom = atoms.value.find((atom) => atom.id === id);
     selectedAtom.value.bonds.push(id);
     newlySelectedAtom.bonds.push(selectedAtom.value.id);
@@ -119,6 +120,9 @@ function selectAtom(id) {
     });
     updateBonds();
     updateMoleculeLabel();
+    selectedAtom.value.strokeWidth = 1;
+    selectedAtom.value = null;
+  } else {
     selectedAtom.value.strokeWidth = 1;
     selectedAtom.value = null;
   }
@@ -138,9 +142,15 @@ function updateBonds() {
       (atom) => atom.id === bond.initialAtomId
     );
     const nextAtom = atoms.value.find((atom) => atom.id === bond.nextAtomId);
-    const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
-    bond.config = { ...bondLineConfig, points: points };
+
+    if (!(initialAtom && nextAtom)) {
+      bonds.value.splice(i, 1);
+    } else {
+      const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
+      bond.config = { ...bondLineConfig, points: points };
+    }
   }
+  console.log(bonds.value);
 }
 
 function updateMoleculeLabel() {
