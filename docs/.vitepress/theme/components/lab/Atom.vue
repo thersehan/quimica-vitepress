@@ -4,6 +4,7 @@
     @click="$emit('atomClick', atom.id)"
     @dblclick="$emit('atomDblClick', atom.id)"
     @dragmove="$emit('atomDragMove', atom.id)"
+    @dragend="$emit('atomDragEnd', atom.id)"
   />
 </template>
 

@@ -24,6 +24,7 @@
         @atomClick="selectAtom"
         @atomDblClick="deleteAtom"
         @atomDragMove="handleAtomDragMove"
+        @atomDragEnd="handleAtomDragEnd"
       />
     </v-layer>
   </v-stage>
@@ -80,7 +81,7 @@ function addAtom() {
     x: mousePos.x,
     y: mousePos.y,
     fill: "black",
-    stroke: "white",
+    stroke: "gray",
     strokeWidth: 1,
     radius: 12,
     draggable: true,
@@ -95,10 +96,20 @@ function deleteAtom(id) {
   atoms.value.splice(index, 1);
   updateBonds();
   updateMoleculeLabel();
-  return false;
+  for (const atom of atoms.value) {
+    atom.bonds = atom.bonds.filter((bond) => bond.id === id);
+  }
 }
 
 function handleAtomDragMove(id) {
+  const mousePos = stage.value.getNode().getPointerPosition();
+  const atom = atoms.value.find((atom) => atom.id === id);
+  atom.x = mousePos.x;
+  atom.y = mousePos.y;
+  updateBonds();
+}
+
+function handleAtomDragEnd(id) {
   const mousePos = stage.value.getNode().getPointerPosition();
   const atom = atoms.value.find((atom) => atom.id === id);
   atom.x = mousePos.x;
@@ -136,21 +147,24 @@ function unselect() {
 }
 
 function updateBonds() {
+  const markedBonds = [];
   for (let i = 0; i < bonds.value.length; i++) {
     const bond = bonds.value[i];
     const initialAtom = atoms.value.find(
       (atom) => atom.id === bond.initialAtomId
     );
     const nextAtom = atoms.value.find((atom) => atom.id === bond.nextAtomId);
-
     if (!(initialAtom && nextAtom)) {
+      markedBonds.push(i);
       bonds.value.splice(i, 1);
     } else {
       const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
       bond.config = { ...bondLineConfig, points: points };
     }
   }
-  console.log(bonds.value);
+  for (let i = 0; i < markedBonds.length; i++) {
+    bonds.value.splice(i, 1);
+  }
 }
 
 function updateMoleculeLabel() {
@@ -160,11 +174,7 @@ function updateMoleculeLabel() {
       numberToSubtext(atoms.value.length) +
       "H" +
       numberToSubtext(
-        4 * atoms.value.length -
-          atoms.value.reduce(
-            (bondCounter, atom) => bondCounter + atom.bonds.length,
-            0
-          )
+        4 * atoms.value.length - 2 * bonds.value.length
       ).toString();
   } else {
     moleculeText.value.text = "...";
