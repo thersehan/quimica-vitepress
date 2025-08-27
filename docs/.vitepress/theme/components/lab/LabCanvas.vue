@@ -10,7 +10,7 @@
     <v-layer>
       <v-group v-for="atom in atoms" :key="atom.id">
         <v-line
-          v-for="(bond, index) in atom.bonds"
+          v-for="(bond, index) in bonds"
           :key="index"
           :config="bond.config"
         />
@@ -23,7 +23,7 @@
         :atom
         @atomClick="selectAtom"
         @atomDblClick="deleteAtom"
-        @atomMovement="handleAtomMovement"
+        @atomDragMove="handleAtomDragMove"
       />
     </v-layer>
   </v-stage>
@@ -71,6 +71,8 @@ const atomIdCounter = ref(0);
 
 const selectedAtom = ref(null);
 
+const bonds = ref([]);
+
 function addAtom() {
   const mousePos = stage.value.getNode().getPointerPosition();
   atoms.value.push({
@@ -95,11 +97,12 @@ function deleteAtom(id) {
   return false;
 }
 
-function handleAtomMovement(id) {
+function handleAtomDragMove(id) {
   const mousePos = stage.value.getNode().getPointerPosition();
   const atom = atoms.value.find((atom) => atom.id === id);
   atom.x = mousePos.x;
   atom.y = mousePos.y;
+  updateBonds();
 }
 
 function selectAtom(id) {
@@ -108,33 +111,16 @@ function selectAtom(id) {
     selectedAtom.value.strokeWidth = 3;
   } else {
     const newlySelectedAtom = atoms.value.find((atom) => atom.id === id);
-    selectedAtom.value.bonds.push({
-      id,
-      config: {
-        ...bondLineConfig,
-        points: [
-          selectedAtom.value.x,
-          selectedAtom.value.y,
-          newlySelectedAtom.x,
-          newlySelectedAtom.y,
-        ],
-      },
+    selectedAtom.value.bonds.push(id);
+    newlySelectedAtom.bonds.push(selectedAtom.value.id);
+    bonds.value.push({
+      initialAtomId: selectedAtom.value.id,
+      nextAtomId: newlySelectedAtom.id,
     });
-    newlySelectedAtom.bonds.push({
-      id,
-      config: {
-        ...bondLineConfig,
-        points: [
-          selectedAtom.value.x,
-          selectedAtom.value.y,
-          newlySelectedAtom.x,
-          newlySelectedAtom.y,
-        ],
-      },
-    });
+    updateBonds();
+    updateMoleculeLabel();
     selectedAtom.value.strokeWidth = 1;
     selectedAtom.value = null;
-    updateMoleculeLabel();
   }
 }
 
@@ -143,6 +129,18 @@ function unselect() {
     selectedAtom.value.strokeWidth = 1;
   }
   selectedAtom.value = null;
+}
+
+function updateBonds() {
+  for (let i = 0; i < bonds.value.length; i++) {
+    const bond = bonds.value[i];
+    const initialAtom = atoms.value.find(
+      (atom) => atom.id === bond.initialAtomId
+    );
+    const nextAtom = atoms.value.find((atom) => atom.id === bond.nextAtomId);
+    const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
+    bond.config = { ...bondLineConfig, points: points };
+  }
 }
 
 function updateMoleculeLabel() {

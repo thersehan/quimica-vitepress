@@ -3,7 +3,7 @@
     :config="atom"
     @click="$emit('atomClick', atom.id)"
     @dblclick="$emit('atomDblClick', atom.id)"
-    @dragend="$emit('atomMovement', atom.id)"
+    @dragmove="$emit('atomDragMove', atom.id)"
   />
 </template>
 
