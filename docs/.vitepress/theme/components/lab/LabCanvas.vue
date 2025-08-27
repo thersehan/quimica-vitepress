@@ -3,8 +3,9 @@
     <v-layer>
       <v-rect :config="background" @dblclick="addAtom" @click="unselect" />
     </v-layer>
-    <v-layer ref="button-layer">
-      <v-text :config="elementButtonText" />
+    <v-layer ref="text-layer">
+      <v-text :config="guideText" />
+      <v-text :config="moleculeText" />
     </v-layer>
     <v-layer>
       <v-group v-for="atom in atoms" :key="atom.id">
@@ -31,6 +32,7 @@
 <script setup>
 import { ref, onBeforeMount } from "vue";
 import Atom from "./Atom.vue";
+import { numberToSubtext } from "../../../../lib/unicodeSubtext";
 
 const stageSize = ref({ width: 0, height: 0 });
 const stage = ref(null);
@@ -45,14 +47,24 @@ const background = {
   height: 1000,
 };
 
-const elementButtonText = {
+const guideText = {
   x: 30,
   y: 30,
   text: "Clique duas vezes na tela para adicionar um carbono\n\nClique uma vez em um carbono para selecioná-lo\n\nClique duas vezes em um carbono para excluí-lo",
-  fontFamily: "JetBrains Mono",
-  fontSize: 14,
+  fontFamily: "lekton",
+  fontSize: 16,
   fill: "gray",
 };
+
+const moleculeText = ref({
+  x: 30,
+  y: 130,
+  text: "",
+  fontFamily: "lekton",
+  fontSize: 32,
+  fontStyle: "bold",
+  fill: "gray",
+});
 
 const atoms = ref([]);
 const atomIdCounter = ref(0);
@@ -60,7 +72,6 @@ const atomIdCounter = ref(0);
 const selectedAtom = ref(null);
 
 function addAtom() {
-  console.log("add atom");
   const mousePos = stage.value.getNode().getPointerPosition();
   atoms.value.push({
     id: atomIdCounter.value.toString(),
@@ -74,11 +85,13 @@ function addAtom() {
     bonds: [],
   });
   atomIdCounter.value++;
+  updateMoleculeLabel();
 }
 
 function deleteAtom(id) {
   const index = atoms.value.map((atom) => atom.id).indexOf(id);
   atoms.value.splice(index, 1);
+  updateMoleculeLabel();
   return false;
 }
 
@@ -121,6 +134,7 @@ function selectAtom(id) {
     });
     selectedAtom.value.strokeWidth = 1;
     selectedAtom.value = null;
+    updateMoleculeLabel();
   }
 }
 
@@ -129,6 +143,20 @@ function unselect() {
     selectedAtom.value.strokeWidth = 1;
   }
   selectedAtom.value = null;
+}
+
+function updateMoleculeLabel() {
+  moleculeText.value.text =
+    "C" +
+    numberToSubtext(atoms.value.length) +
+    "H" +
+    numberToSubtext(
+      4 * atoms.value.length -
+        atoms.value.reduce(
+          (bondCounter, atom) => bondCounter + atom.bonds.length,
+          0
+        )
+    ).toString();
 }
 
 onBeforeMount(() => {
