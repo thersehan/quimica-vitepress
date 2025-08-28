@@ -154,17 +154,16 @@ function updateBonds() {
       (atom) => atom.id === bond.initialAtomId
     );
     const nextAtom = atoms.value.find((atom) => atom.id === bond.nextAtomId);
-    if (!(initialAtom && nextAtom)) {
+    if (!initialAtom || !nextAtom) {
       markedBonds.push(i);
-      bonds.value.splice(i, 1);
     } else {
       const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
       bond.config = { ...bondLineConfig, points: points };
     }
   }
-  for (let i = 0; i < markedBonds.length; i++) {
-    bonds.value.splice(i, 1);
-  }
+  bonds.value = bonds.value.filter((bond, index) => {
+    return markedBonds.indexOf(index) == -1;
+  });
 }
 
 function updateMoleculeLabel() {
