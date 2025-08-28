@@ -80,29 +80,17 @@ const atoms = [
   {
     id: 'C1', element: 'C', x: 100, y: 140,
     tooltipTitle: 'C1 (Carbono primário) — Propano',
-    info: {
-      classificacao: 'Carbono primário',
-      hibridacao: 'sp3 (~109,5°)',
-      nota: 'Ligado a apenas 1 carbono.'
-    }
+    info: { classificacao: 'Carbono primário', hibridacao: 'sp3 (~109,5°)', nota: 'Ligado a apenas 1 carbono.' }
   },
   {
-    id: 'C2', element: 'C', x: 200, y: 80,
+    id: 'C2', element: 'C', x: 200, y: 82,
     tooltipTitle: 'C2 (Carbono secundário) — Propano',
-    info: {
-      classificacao: 'Carbono secundário',
-      hibridacao: 'sp3 (~109,5°)',
-      nota: 'Ligado a 2 carbonos (centro da molécula).'
-    }
+    info: { classificacao: 'Carbono secundário', hibridacao: 'sp3 (~109,5°)', nota: 'Ligado a 2 carbonos (centro da molécula).' }
   },
   {
     id: 'C3', element: 'C', x: 300, y: 140,
     tooltipTitle: 'C3 (Carbono primário) — Propano',
-    info: {
-      classificacao: 'Carbono primário',
-      hibridacao: 'sp3 (~109,5°)',
-      nota: 'Extremidade oposta ao C1.'
-    }
+    info: { classificacao: 'Carbono primário', hibridacao: 'sp3 (~109,5°)', nota: 'Extremidade oposta ao C1.' }
   }
 ]
 

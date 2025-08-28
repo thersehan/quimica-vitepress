@@ -43,9 +43,11 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 
 - **Normal** (Linear): Apresenta uma única sequência de carbonos, contendo apenas carbonos primários e secundários.  
   Exemplo: Pentano (C₅H₁₂).
+  <MoleculePentano />
 
 - **Ramificada**: Possui pelo menos uma cadeia lateral ligada à principal e inclui no mínimo um carbono terciário.  
   Exemplo: 2-Metilbutano (C₅H₁₂).
+  <Molecule2metilbutano />
 
 ::: warning **Atenção!** Para que a cadeia seja considerada ramificada, deve haver pelo menos um carbono terciário ou um quaternário. Se houver uma cadeia lateral conectada por meio de um heteroátomo (átomo que não é carbono), a cadeia é classificada como linear.
 :::
@@ -79,8 +81,11 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 ## **6. Quanto à natureza das Ligações entre carbonos**
 
 - **Saturada**: Todas as ligações entre carbonos são sigmas (apenas 1 ligação).
-  Exemplo: propano
+  Exemplo: Propano (C₃H₈).
+<MoleculePropano />
 
 - **Insaturada**: Existe pelo menos uma ligação pi (dupla ou tripla) entre carbonos. 
-  Exemplo: prop-2-eno
+  Exemplo: propeno(C₃H₆).
+
+  <MoleculePropeno />
 
