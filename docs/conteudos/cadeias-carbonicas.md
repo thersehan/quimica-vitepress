@@ -25,6 +25,7 @@ A cadeia carbônica é a estrutura formada por átomos de carbono conectados ent
 - **Aromática**: Possui pelo menos um anel benzênico, o que confere propriedades químicas específicas.  
   Exemplo: Benzeno (C₆H₆).
 
+  <MoleculeBenzeno />
 <!--<img src="/images/cadeias-carbonicas/benzeno.png" alt="Estrutura do Benzeno" width="250" />-->
 
 - **Não Aromática** (Alifática ou Alicíclica): Não possui anel benzênico.  
@@ -54,8 +55,12 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 - **Homogênea**: A estrutura principal da cadeia é formada somente por átomos de carbono.  
   Exemplo: Hexano (C₆H₁₄).
 
+  <MoleculeHexano />
+
 - **Heterogênea**: Contém pelo menos um heteroátomo (átomo diferente de carbono e hidrogênio) intercalado entre carbonos.  
   Exemplo: Etilmetilamina (C₂H₅NHCH₃).
+
+  <MoleculeEtilMetilAmina />
 
 ::: warning **Atenção!** Para que uma cadeia seja considerada heterogênea, o heteroátomo deve estar ligado a pelo menos dois carbonos. Se ele estiver apenas na extremidade da cadeia, a classificação continua sendo homogênea.
 :::
@@ -65,6 +70,17 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 - **Mononuclear**: Possui apenas um anel aromático na estrutura.  
   Exemplo: Tolueno (C₆H₅CH₃).
 
+  <MoleculeTolueno />
+
 - **Polinuclear**: Contém dois ou mais anéis aromáticos, podendo ser classificados em:
   - **Isolados:** Quando os anéis não compartilham carbonos entre si.
   - **Condensados:** Quando dois ou mais anéis compartilham carbonos.
+
+## **6. Quanto à natureza das Ligações entre carbonos**
+
+- **Saturada**: Todas as ligações entre carbonos são sigmas (apenas 1 ligação).
+  Exemplo: propano
+
+- **Insaturada**: Existe pelo menos uma ligação pi (dupla ou tripla) entre carbonos. 
+  Exemplo: prop-2-eno
+
