@@ -7,12 +7,16 @@ A cadeia carbônica é a estrutura formada por átomos de carbono conectados ent
 - **Aberta** (Acíclica ou Alifática): Não forma ciclos, sendo uma sequência linear ou ramificada de carbonos.  
   Exemplo: Propano (C₃H₈).
 
-<img src="/images/cadeias-carbonicas/propano.png" alt="Estrutura do Propano" width="250" />
+<MoleculePropano />
+
+<!--<img src="/images/cadeias-carbonicas/propano.png" alt="Estrutura do Propano" width="250" /> -->
 
 - **Fechada** (Cíclica): Forma um ciclo, podendo ser saturada (somente ligações simples) ou insaturada (com ligações duplas ou triplas).  
   Exemplo: Ciclopentano (C₅H₁₀).
+<!-- -->
+<MoleculeCiclopentano />
 
-<img src="/images/cadeias-carbonicas/ciclopentano.png" alt="Estrutura do Ciclopentano" width="250" />
+<!--<img src="/images/cadeias-carbonicas/ciclopentano.png" alt="Estrutura do Ciclopentano" width="250" />-->
 
 - **Mista** (Cíclica Ramificada): Contém uma parte cíclica, mas também possui carbonos fora do ciclo. Alguns autores a consideram uma categoria intermediária entre cadeias abertas e fechadas, outros acreditam que seja uma particularidade das cadeias cíclicas.
 
@@ -21,12 +25,15 @@ A cadeia carbônica é a estrutura formada por átomos de carbono conectados ent
 - **Aromática**: Possui pelo menos um anel benzênico, o que confere propriedades químicas específicas.  
   Exemplo: Benzeno (C₆H₆).
 
-<img src="/images/cadeias-carbonicas/benzeno.png" alt="Estrutura do Benzeno" width="250" />
+  <MoleculeBenzeno />
+<!--<img src="/images/cadeias-carbonicas/benzeno.png" alt="Estrutura do Benzeno" width="250" />-->
 
 - **Não Aromática** (Alifática ou Alicíclica): Não possui anel benzênico.  
   Exemplo: Cicloexano (C₆H₁₂).
 
-<img src="/images/cadeias-carbonicas/ciclohexano.png" alt="Estrutura do Ciclohexano" width="250" />
+  <MoleculeCiclohexano />
+
+<!--<img src="/images/cadeias-carbonicas/ciclohexano.png" alt="Estrutura do Ciclohexano" width="250" />-->
 
 O benzeno (C₆H₆), também chamado de anel benzênico, é um hidrocarboneto aromático, ou seja, um composto formado apenas por carbono e hidrogênio que possui um anel estável de seis carbonos. Sua estrutura é representada por um hexágono com um círculo no centro, simbolizando a ressonância das ligações.
 
@@ -36,9 +43,11 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 
 - **Normal** (Linear): Apresenta uma única sequência de carbonos, contendo apenas carbonos primários e secundários.  
   Exemplo: Pentano (C₅H₁₂).
+  <MoleculePentano />
 
 - **Ramificada**: Possui pelo menos uma cadeia lateral ligada à principal e inclui no mínimo um carbono terciário.  
   Exemplo: 2-Metilbutano (C₅H₁₂).
+  <Molecule2metilbutano />
 
 ::: warning **Atenção!** Para que a cadeia seja considerada ramificada, deve haver pelo menos um carbono terciário ou um quaternário. Se houver uma cadeia lateral conectada por meio de um heteroátomo (átomo que não é carbono), a cadeia é classificada como linear.
 :::
@@ -48,8 +57,12 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 - **Homogênea**: A estrutura principal da cadeia é formada somente por átomos de carbono.  
   Exemplo: Hexano (C₆H₁₄).
 
+  <MoleculeHexano />
+
 - **Heterogênea**: Contém pelo menos um heteroátomo (átomo diferente de carbono e hidrogênio) intercalado entre carbonos.  
   Exemplo: Etilmetilamina (C₂H₅NHCH₃).
+
+  <MoleculeEtilMetilAmina />
 
 ::: warning **Atenção!** Para que uma cadeia seja considerada heterogênea, o heteroátomo deve estar ligado a pelo menos dois carbonos. Se ele estiver apenas na extremidade da cadeia, a classificação continua sendo homogênea.
 :::
@@ -59,6 +72,20 @@ A ressonância significa que as ligações entre os carbonos não são simples n
 - **Mononuclear**: Possui apenas um anel aromático na estrutura.  
   Exemplo: Tolueno (C₆H₅CH₃).
 
+  <MoleculeTolueno />
+
 - **Polinuclear**: Contém dois ou mais anéis aromáticos, podendo ser classificados em:
   - **Isolados:** Quando os anéis não compartilham carbonos entre si.
   - **Condensados:** Quando dois ou mais anéis compartilham carbonos.
+
+## **6. Quanto à natureza das Ligações entre carbonos**
+
+- **Saturada**: Todas as ligações entre carbonos são sigmas (apenas 1 ligação).
+  Exemplo: Propano (C₃H₈).
+<MoleculePropano />
+
+- **Insaturada**: Existe pelo menos uma ligação pi (dupla ou tripla) entre carbonos. 
+  Exemplo: propeno(C₃H₆).
+
+  <MoleculePropeno />
+
