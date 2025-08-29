@@ -9,6 +9,15 @@
     </v-layer>
     <v-layer>
       <v-group v-for="atom in atoms" :key="atom.id">
+        <v-rect
+          v-for="(bond, index) in bonds"
+          :key="index"
+          :config="bond.config"
+        />
+      </v-group>
+    </v-layer>
+    <v-layer>
+      <v-group v-for="atom in atoms" :key="atom.id">
         <v-line
           v-for="(bond, index) in bonds"
           :key="index"
@@ -128,6 +137,7 @@ function selectAtom(id) {
     bonds.value.push({
       initialAtomId: selectedAtom.value.id,
       nextAtomId: newlySelectedAtom.id,
+      type: 1,
     });
     updateBonds();
     updateMoleculeLabel();
@@ -157,8 +167,47 @@ function updateBonds() {
     if (!initialAtom || !nextAtom) {
       markedBonds.push(i);
     } else {
+      const repeatingBondCounter = bonds.value.filter(
+        (repeatingBond) =>
+          (repeatingBond.initialAtomId === initialAtom.id &&
+            repeatingBond.nextAtomId === nextAtom.id) ||
+          (repeatingBond.initialAtomId === nextAtom.id &&
+            repeatingBond.nextAtomId === initialAtom.id)
+      ).length;
       const points = [initialAtom.x, initialAtom.y, nextAtom.x, nextAtom.y];
-      bond.config = { ...bondLineConfig, points: points };
+      const dist = Math.sqrt(
+        (nextAtom.x - initialAtom.x) ** 2 + (nextAtom.y - initialAtom.y) ** 2
+      );
+      const adjacentSide = nextAtom.x - initialAtom.x;
+      const oppositeSide = nextAtom.y - initialAtom.y;
+      const hypotenuse = nextAtom.x - initialAtom.x;
+      const coords = {
+        x: (nextAtom.x + initialAtom.x) / 2 - adjacentSide / 2,
+        y: (nextAtom.y + initialAtom.y) / 2 - oppositeSide / 2,
+      };
+
+      const rotation = Math.atan(oppositeSide / hypotenuse) * 57.3 - 90;
+
+      if (repeatingBondCounter === 1) {
+        bond.type = 1;
+        bond.config = { ...bondLineConfig, points };
+      }
+
+      if (repeatingBondCounter === 2) {
+        bond.type = 2;
+        bond.config = {
+          ...bondLineConfig,
+          width: 6,
+          height: dist,
+          x: coords.x,
+          y: coords.y,
+          rotation,
+        };
+      }
+
+      if (repeatingBondCounter === 3) {
+        // ...
+      }
     }
   }
   bonds.value = bonds.value.filter((bond, index) => {
