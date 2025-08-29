@@ -180,13 +180,15 @@ function updateBonds() {
       );
       const adjacentSide = nextAtom.x - initialAtom.x;
       const oppositeSide = nextAtom.y - initialAtom.y;
-      const hypotenuse = nextAtom.x - initialAtom.x;
       const coords = {
         x: (nextAtom.x + initialAtom.x) / 2 - adjacentSide / 2,
         y: (nextAtom.y + initialAtom.y) / 2 - oppositeSide / 2,
       };
 
-      const rotation = Math.atan(oppositeSide / hypotenuse) * 57.3 - 90;
+      let rotation = Math.atan(oppositeSide / adjacentSide) * 57.3;
+      adjacentSide > 0
+        ? (rotation = rotation - 90)
+        : (rotation = rotation + 90);
 
       if (repeatingBondCounter === 1) {
         bond.type = 1;
