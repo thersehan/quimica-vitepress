@@ -151,13 +151,13 @@
  * -------------------------------------------------------------------------- */
 
 @font-face {
-  font-family: "Lekton";
-  src: url(docs/.vitepress/theme/fonts/Lekton-Regular.ttf);
+  font-family: lekton;
+  src: url(./fonts/Lekton-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Lekton";
-  src: url(docs/.vitepress/theme/fonts/Lekton-Bold.ttf);
+  font-family: lekton;
+  src: url(./fonts/Lekton-Bold.ttf);
   font-weight: bold;
 }
 
