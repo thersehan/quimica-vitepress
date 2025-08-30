@@ -158,6 +158,7 @@ function unselect() {
 
 function updateBonds() {
   const markedBonds = [];
+  const repeatingBondCache = [];
   for (let i = 0; i < bonds.value.length; i++) {
     const bond = bonds.value[i];
     const initialAtom = atoms.value.find(
@@ -196,15 +197,34 @@ function updateBonds() {
       }
 
       if (repeatingBondCounter === 2) {
-        bond.type = 2;
-        bond.config = {
-          ...bondLineConfig,
-          width: 6,
-          height: dist,
-          x: coords.x,
-          y: coords.y,
-          rotation,
-        };
+        if (
+          repeatingBondCache
+            .map((bond) => bond.initialAtomId)
+            .indexOf(initialAtom.id) === -1 &&
+          repeatingBondCache
+            .map((bond) => bond.nextAtomId)
+            .indexOf(initialAtom.id) === -1 &&
+          repeatingBondCache
+            .map((bond) => bond.initialAtomId)
+            .indexOf(nextAtom.id) === -1 &&
+          repeatingBondCache
+            .map((bond) => bond.nextAtomId)
+            .indexOf(nextAtom.id) === -1
+        ) {
+          repeatingBondCache.push({
+            initialAtomId: initialAtom.id,
+            nextAtomId: nextAtom.id,
+          });
+          bond.type = 2;
+          bond.config = {
+            ...bondLineConfig,
+            width: 6,
+            height: dist,
+            x: coords.x,
+            y: coords.y,
+            rotation,
+          };
+        }
       }
 
       if (repeatingBondCounter === 3) {
