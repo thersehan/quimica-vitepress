@@ -150,6 +150,17 @@
  * Custom
  * -------------------------------------------------------------------------- */
 
+@font-face {
+  font-family: "Lekton";
+  src: url(docs/.vitepress/theme/fonts/Lekton-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lekton";
+  src: url(docs/.vitepress/theme/fonts/Lekton-Bold.ttf);
+  font-weight: bold;
+}
+
 .spin-animation {
   width: 300px;
   position: absolute;
