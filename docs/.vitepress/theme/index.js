@@ -2,17 +2,17 @@
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
 import LabCanvas from "./components/lab/LabCanvas.vue";
-import MoleculeEtanol from './components/MoleculeEtanol.vue'
-import MoleculePropano from "./components/MoleculePropano.vue"; 
-import MoleculeCiclopentano from "./components/MoleculeCiclopentano.vue";
-import MoleculeCiclohexano from "./components/MoleculeCiclohexano.vue";
-import MoleculeHexano from "./components/MoleculeHexano.vue";
-import MoleculeBenzeno from "./components/MoleculeBenzeno.vue";
-import MoleculeEtilMetilAmina from "./components/MoleculeEtilMetilAmina.vue"; 
-import MoleculeTolueno from "./components/MoleculeTolueno.vue";
-import MoleculePentano from "./components/MoleculePentano.vue";
-import Molecule2metilbutano from "./components/Molecule2metilbutano.vue";
-import MoleculePropeno from "./components/MoleculePropeno.vue";
+import MoleculeEtanol from "./components/InteractiveMolecules/MoleculeEtanol.vue";
+import MoleculePropano from "./components/InteractiveMolecules/MoleculePropano.vue";
+import MoleculeCiclopentano from "./components/InteractiveMolecules/MoleculeCiclopentano.vue";
+import MoleculeCiclohexano from "./components/InteractiveMolecules/MoleculeCiclohexano.vue";
+import MoleculeHexano from "./components/InteractiveMolecules/MoleculeHexano.vue";
+import MoleculeBenzeno from "./components/InteractiveMolecules/MoleculeBenzeno.vue";
+import MoleculeEtilMetilAmina from "./components/InteractiveMolecules/MoleculeEtilMetilAmina.vue";
+import MoleculeTolueno from "./components/InteractiveMolecules/MoleculeTolueno.vue";
+import MoleculePentano from "./components/InteractiveMolecules/MoleculePentano.vue";
+import Molecule2metilbutano from "./components/InteractiveMolecules/Molecule2metilbutano.vue";
+import MoleculePropeno from "./components/InteractiveMolecules/MoleculePropeno.vue";
 import "./style.css";
 
 import VueKonva from "vue-konva";
