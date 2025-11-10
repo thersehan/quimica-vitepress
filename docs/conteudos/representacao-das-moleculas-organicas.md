@@ -30,7 +30,7 @@ A **fórmula de traços** representa cada átomo com seu **símbolo químico** e
 
 - O metoximetano pode ser representado assim:
 
-<img src='/images/representacao-das-moleculas-organicas/missing.jpg' alt="Sem imagem disponível" width=250 />
+<img src='/images/representacao-das-moleculas-organicas/metoximetano.png' alt="Sem imagem disponível" width=250 />
 
 ## 3. Fórmula Simplificada
 
