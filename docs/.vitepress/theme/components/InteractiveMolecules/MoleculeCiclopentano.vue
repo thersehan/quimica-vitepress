@@ -138,7 +138,7 @@ function onMouseMove(e) {
 .hydrogen-label { font-size: 12px; fill: #555; }
 .atom { fill: #fff; stroke: #222; stroke-width: 2; cursor: default; transition: stroke 120ms ease, fill 120ms ease; }
 .atom-symbol { font-size: 12px; font-weight: 700; fill: #222; }
-.mol-tooltip { position: absolute; min-width: 240px; max-width: 280px; background: #ffffff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.12); padding: 10px 12px; pointer-events: none; font-size: 14px; line-height: 1.35; }
+.mol-tooltip { position: absolute; min-width: 240px; max-width: 280px; background: var(--vp-c-bg);; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.12); padding: 10px 12px; pointer-events: none; font-size: 14px; line-height: 1.35; }
 .mol-tooltip-title { font-weight: 700; margin-bottom: 6px; }
 .mol-tooltip-body .muted { color: #666; margin-top: 4px; font-size: 13px; }
 </style>

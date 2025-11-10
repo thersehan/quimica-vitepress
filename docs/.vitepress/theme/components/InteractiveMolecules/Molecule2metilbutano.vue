@@ -192,7 +192,7 @@
     /* tooltip */
     .mol-tooltip {
     position: absolute;
-    background: #ffffff;
+    background: var(--vp-c-bg);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 8px 10px;
