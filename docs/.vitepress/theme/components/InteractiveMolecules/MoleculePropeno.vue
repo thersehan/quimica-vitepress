@@ -64,7 +64,7 @@
         <div><strong>Átomo:</strong> {{ tooltip.atom.id }} ({{ tooltip.atom.element }})</div>
         <div><strong>Classificação:</strong> {{ tooltip.atom.info.classificacao }}</div>
         <div><strong>Hibridação:</strong> {{ tooltip.atom.info.hibridacao }}</div>
-        <div v-if="tooltip.atom.info.nota" class="muted">{{ tooltip.atom.info.nota }}</div>
+        <!-- <div v-if="tooltip.atom.info.nota" class="muted">{{ tooltip.atom.info.nota }}</div> -->
       </div>
     </div>
   </div>
