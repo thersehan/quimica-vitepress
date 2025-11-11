@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Química Orgânica"
-  text: Projeto de Iniciação Científica
-  tagline: "Uma apostila interativa"
+  text: "Uma apostila interativa"
+  tagline: Projeto de Iniciação Científica
 
 footer: true
 ---
