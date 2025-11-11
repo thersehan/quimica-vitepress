@@ -13,6 +13,7 @@ import MoleculeTolueno from "./components/InteractiveMolecules/MoleculeTolueno.v
 import MoleculePentano from "./components/InteractiveMolecules/MoleculePentano.vue";
 import Molecule2metilbutano from "./components/InteractiveMolecules/Molecule2metilbutano.vue";
 import MoleculePropeno from "./components/InteractiveMolecules/MoleculePropeno.vue";
+import Molecule from "./components/InteractiveMolecules/Molecule.vue";
 import "./style.css";
 
 import VueKonva from "vue-konva";
@@ -38,6 +39,7 @@ export default {
     app.component("MoleculePentano", MoleculePentano);
     app.component("Molecule2metilbutano", Molecule2metilbutano);
     app.component("MoleculePropeno", MoleculePropeno);
+    app.component("Molecule",Molecule)
     app.use(VueKonva);
   },
 };
