@@ -22,7 +22,9 @@ Para entender melhor, podemos observar a estrutura da molécula de **clorofórmi
 
 <img src="/images/caracteristicas-do-carbono/cloroformio.jpg" alt="Clorofórmio" width=250 />
 
-Mesmo que a posição dos átomos na molécula mude, suas propriedades **continuam as mesmas**. Isso ocorre porque as ligações do carbono são equivalentes e podem se reorganizar sem alterar a identidade química da substância.
+Essa molécula possui 4 radicais sendo ligados ao carbono: 3 átomos de cloro e um de hidrogênio. De acordo com o postulado, mesmo que a posição dos átomos na molécula mude, suas propriedades **continuam as mesmas**. Isso ocorre porque as ligações do carbono são equivalentes e podem se reorganizar sem alterar a identidade química da substância.
+
+Assim, se qualquer um dos radicais ocupar outra posição (ex: o cloro da esquerda trocar com o hidrogênio), como as ligações são equivalentes, o efeito de cada uma se manterá o mesmo, e a molécula continuará igual.
 
 ### 3º Postulado: "O carbono forma cadeias".
 

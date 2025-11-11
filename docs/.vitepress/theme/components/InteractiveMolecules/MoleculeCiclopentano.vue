@@ -6,7 +6,6 @@
       height="400"
       viewBox="0 0 400 400"
       role="img"
-      aria-label="Estrutura simplificada do ciclopentano com hidrogênios"
     >
       <!-- Fundo branco -->
       <rect width="100%" height="100%" fill="white" />

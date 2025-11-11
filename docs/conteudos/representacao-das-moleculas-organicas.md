@@ -18,6 +18,9 @@ A **fórmula molecular** indica **apenas a quantidade de átomos de cada element
 
 - O etanol (C₂H₆O) e o metoximetano (C₂H₆O) possuem **a mesma fórmula molecular**, mas são substâncias diferentes.
 
+O etanol é um biocombustível líquido à temperatura ambiente que pode ser usado tanto em motores de combustão quanto em fábricas como matéria prima para a produção de bebidas, produtos de limpeza e cosméticos.
+
+O metoximetano, ou dimetil-éter (DME), é um gás em condições normais de temperatura e pressão e é usado como propulsor em aerossóis.
 ## 2. Fórmula de Traços
 
 A **fórmula de traços** representa cada átomo com seu **símbolo químico** e as ligações entre eles com **traços**.
@@ -26,7 +29,7 @@ A **fórmula de traços** representa cada átomo com seu **símbolo químico** e
 
 - O etanol pode ser representado assim:
 
-<img src='/images/representacao-das-moleculas-organicas/etanol.jpg' alt="Etanol" />
+<img src='/images/representacao-das-moleculas-organicas/etanol.jpg' alt="Etanol"/>
 
 - O metoximetano pode ser representado assim:
 
@@ -50,7 +53,7 @@ A **fórmula condensada** é uma versão ainda mais compacta da **fórmula simpl
 
 **Exemplos:**
 
-- O etano vira **H3CCH2OH**
+- O etanol vira **H3CCH2OH**
 - O propano **(H3C — CH2 — CH3)** com um grupo metil **(H₃C —)** ligado ao segundo carbono) vira **H₃CCH(CH₃)CH3**
 
 ## 5. Fórmula de Linha (ou Bastão)
@@ -65,15 +68,15 @@ A **fórmula de linha** é a mais utilizada no estudo da química orgânica, poi
 
 - O etano **(CH₃ — CH₃)** é representado como
 
-<img src='/images/representacao-das-moleculas-organicas/etano.jpg' alt="Etano" />
+<img src='/images/representacao-das-moleculas-organicas/etano.jpg' alt="Etano" width=100/>
 
 - O metanol **(CH₃ — OH)** é representado como
 
-<img src='/images/representacao-das-moleculas-organicas/metanol.jpg' alt="Metanol" />
+<img src='/images/representacao-das-moleculas-organicas/metanol.jpg' alt="Metanol" width=100/>
 
 - O propano **(H3C — CH2 — CH3)** é representado como
 
-<img src='/images/representacao-das-moleculas-organicas/propano.png' alt="Propano" width=50 />
+<img src='/images/representacao-das-moleculas-organicas/propano.png' alt="Propano" width=100 />
 
 ## 6. Fórmula Tridimensional
 
