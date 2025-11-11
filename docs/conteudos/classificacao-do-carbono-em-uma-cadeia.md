@@ -9,4 +9,6 @@ Os átomos de carbono podem ser classificados de acordo com a quantidade de outr
 
 Por exemplo, mesmo que um carbono no grupo **CH₂** esteja fazendo uma ligação dupla com outro carbono, ele ainda será classificado como primário, pois continua ligado a apenas um único carbono.
 
+
+<Molecule />
 Obs. A ligação com heteroátomos (átomos diferentes de carbono e hidrogênio) não é relevante para essa classificação, portanto, mesmo que um carbono esteja ligado a três heteroátomos, ele ainda será um carbono primário.

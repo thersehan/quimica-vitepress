@@ -77,7 +77,7 @@ const molecule = {
 const atoms = [
   { id: 'C1', element: 'C', x: 80,  y: 120, info: { classificacao: 'Carbono primário', hibridacao: 'sp3' } },
   { id: 'C2', element: 'C', x: 150, y: 80,  info: { classificacao: 'Carbono primário', hibridacao: 'sp3' } },
-  { id: 'N',  element: 'N', x: 220, y: 120, info: { classificacao: 'Nitrogênio: amina', hibridacao: 'sp3' } },
+  { id: 'N',  element: 'N', x: 220, y: 120, info: { classificacao: 'Heteroátomo: amina', hibridacao: 'sp3' } },
   { id: 'C3', element: 'C', x: 290, y: 80,  info: { classificacao: 'Carbono primário', hibridacao: 'sp3' } }
 ]
 

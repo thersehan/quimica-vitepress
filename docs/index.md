@@ -3,11 +3,23 @@
 layout: home
 
 hero:
-  name: "Química Orgânica"
-  text: Projeto de Iniciação Científica
-  tagline: "Uma apostila interativa"
+  name: "quimica-vitepress"
+  text: "A VitePress Site"
+  tagline: My great project tagline
+  actions:
+    - theme: brand
+      text: Markdown Examples
+      link: /markdown-examples
+    - theme: alt
+      text: API Examples
+      link: /api-examples
 
-footer: true
+features:
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature B
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature C
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-<img src="/public/imagem-home.png" class="spin-animation">
